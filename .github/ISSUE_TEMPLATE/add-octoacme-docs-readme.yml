@@ -63,7 +63,7 @@ A central README with links, summaries, and navigation will:
       label: "Suggested Content (optional)"
       description: "Paste the proposed new text, checklist, diagram, or example content you'd like to add. (Optional)"
       placeholder: "E.g., - New checklist items, - Copy for a new section, - Example scenario, etc."
-      value: "# OctoAcme Project Management Process Documentation
+      value: "# OctoAcme Project Management Process Documentation"
 
 ## Overview
 OctoAcme follows a structured, customer-first approach to project management that emphasizes iterative delivery, clear ownership, and data-driven decision making. This documentation provides guidance for all team members on how we plan, execute, track, and continuously improve our projects.
