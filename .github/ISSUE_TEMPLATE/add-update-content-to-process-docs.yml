@@ -17,7 +17,7 @@ body:
         - octoacme-release-and-deployment.md
         - octoacme-retrospective-and-continuous-improvement.md
         - octoacme-roles-and-personas.md
-        - <new document>
+        - "<new document>"
     validations:
       required: true
 
@@ -45,6 +45,8 @@ body:
       label: "Suggested Content (optional)"
       description: "Paste the proposed new text, checklist, diagram, or example content you'd like to add. (Optional)"
       placeholder: "E.g., - New checklist items, - Copy for a new section, - Example scenario, etc."
+    validations:
+      required: false
 
   - type: checkboxes
     id: acceptance_criteria
