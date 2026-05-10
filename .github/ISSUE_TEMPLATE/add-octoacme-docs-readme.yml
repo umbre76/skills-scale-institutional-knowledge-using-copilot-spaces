@@ -1,0 +1,140 @@
+name: "Add OctoAcme Project Management Docs README"
+description: "Create a README for OctoAcme Project Management Process Docs with summary and links"
+title: "[Process Doc Update]: Create README for OctoAcme Project Management Docs with process summary and documentation links"
+labels: ["documentation", "process improvement"]
+body:
+  - type: dropdown
+    id: process_doc
+    attributes:
+      label: "Which process document do you want to update?"
+      description: "Select the program management process document you want to add content to. If this is a new process doc, choose ''."
+      options:
+        - octoacme-project-management-overview.md
+        - octoacme-project-initiation.md
+        - octoacme-project-planning.md
+        - octoacme-execution-and-tracking.md
+        - octoacme-risks-and-communication.md
+        - octoacme-release-and-deployment.md
+        - octoacme-retrospective-and-continuous-improvement.md
+        - octoacme-roles-and-personas.md
+        - "<new document>"
+    validations:
+      required: true
+
+  - type: textarea
+    id: content_summary
+    attributes:
+      label: "Summary of New Content"
+      description: "Briefly describe the new content or update you want to add."
+      placeholder: "E.g., Add clarification to risk escalation paths, new checklist for releases, additional role responsibilities, etc."
+      value: "Create a README.md file in the docs/ folder that serves as a central hub for all OctoAcme Project Management Process Documentation. The README should include:
+      
+1. A brief executive summary of OctoAcme's project management approach and core principles
+2. A structured index/navigation section with links to all process documents
+3. Quick reference guide for different project lifecycle phases
+4. Explanation of key roles and their interactions
+5. Getting started guidance for new team members"
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: "Why is this update needed?"
+      description: "Explain the reason for this addition. Is it to address a gap, improve clarity, incorporate a best practice, etc.?"
+      placeholder: "E.g., Identified gap in process, team feedback, alignment with industry standards, etc."
+      value: "The OctoAcme project management documentation is currently scattered across multiple markdown files in the docs/ folder. New team members and stakeholders lack a single entry point to understand:
+- The overall project management philosophy and approach
+- How different processes relate to each other
+- Which document to consult for specific scenarios
+- The roles and responsibilities involved
+
+A central README with links, summaries, and navigation will:
+- Accelerate onboarding for new team members
+- Provide a clear reference structure for the documentation
+- Improve discoverability and usability of the existing process docs
+- Establish a knowledge hub that can evolve with team needs"
+    validations:
+      required: true
+
+  - type: textarea
+    id: example_content
+    attributes:
+      label: "Suggested Content (optional)"
+      description: "Paste the proposed new text, checklist, diagram, or example content you'd like to add. (Optional)"
+      placeholder: "E.g., - New checklist items, - Copy for a new section, - Example scenario, etc."
+      value: "# OctoAcme Project Management Process Documentation
+
+## Overview
+OctoAcme follows a structured, customer-first approach to project management that emphasizes iterative delivery, clear ownership, and data-driven decision making. This documentation provides guidance for all team members on how we plan, execute, track, and continuously improve our projects.
+
+## Core Principles
+- **Customer-first**: Prioritize customer value and usability
+- **Iterative delivery**: Deliver small, testable increments
+- **Clear ownership**: Each project has named leadership and accountabilities
+- **Data-informed decisions**: Measure impact and iterate based on evidence
+- **Psychological safety**: Encourage feedback and learning
+
+## Documentation Index
+
+### Project Lifecycle
+
+| Phase | Document | Purpose |
+|-------|----------|---------|
+| **Initiation** | [Project Initiation Guide](octoacme-project-initiation.md) | Validate business need, align stakeholders, create lightweight plan |
+| **Planning** | [Project Planning](octoacme-project-planning.md) | Break work into shippable increments, identify dependencies, align timelines |
+| **Execution & Tracking** | [Execution & Tracking](octoacme-execution-and-tracking.md) | Manage day-to-day execution and track progress toward milestones |
+| **Release & Deployment** | [Release & Deployment Guide](octoacme-release-and-deployment.md) | Standardize feature releases and reduce deployment risk |
+| **Retrospective** | [Retrospective & Continuous Improvement](octoacme-retrospective-and-continuous-improvement.md) | Capture learnings and convert to actionable improvements |
+
+### Supporting Resources
+
+- **[Project Management Overview](octoacme-project-management-overview.md)** — High-level introduction to OctoAcme's approach, core roles, key artifacts, and communication cadence
+- **[Roles & Personas](octoacme-roles-and-personas.md)** — Detailed responsibilities and goals for Developers, Product Managers, and Project Managers
+- **[Risk Management & Communication](octoacme-risks-and-communication.md)** — How to identify, manage, escalate, and communicate about risks and dependencies
+
+## Quick Reference by Role
+
+### I'm a Developer
+Start with [Execution & Tracking](octoacme-execution-and-tracking.md) and [Project Planning](octoacme-project-planning.md) to understand workflows, PR standards, and quality expectations.
+
+### I'm a Product Manager
+Review [Project Initiation Guide](octoacme-project-initiation.md) and [Project Management Overview](octoacme-project-management-overview.md) for goal-setting and prioritization frameworks.
+
+### I'm a Project Manager
+Begin with [Project Management Overview](octoacme-project-management-overview.md) and [Risk Management & Communication](octoacme-risks-and-communication.md) for planning, tracking, and communication guidance.
+
+### I'm New to the Team
+1. Read this README for context
+2. Review [Project Management Overview](octoacme-project-management-overview.md)
+3. Read [Roles & Personas](octoacme-roles-and-personas.md) to understand your team
+4. Deep-dive into documents relevant to your role
+
+## Communication Cadence
+- **Daily**: Team standups (15 min)
+- **Weekly**: PM + PdM sync, twice-weekly delivery standups
+- **Monthly**: Stakeholder updates
+- **Per project**: Kickoffs, retrospectives, demos
+
+## Key Contacts & Escalation
+For questions about these processes or issues that need escalation:
+1. Team-level triage in daily standup
+2. PM escalates to Product Lead and dependent teams
+3. Sponsor-level escalation for business-impacting issues
+
+---
+
+**Last Updated**: [DATE]
+**Maintained by**: OctoAcme Project Leadership"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: acceptance_criteria
+    attributes:
+      label: "Acceptance Criteria"
+      description: "Check all that apply:"
+      options:
+        - label: "Content aligns with existing process docs"
+        - label: "Update improves clarity or closes a documented gap"
+        - label: "Proposed content has been reviewed with stakeholders (if needed)"
